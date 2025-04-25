@@ -74,9 +74,9 @@ The frontend will start at: http://localhost:5173
 
 ![Homepage](./screenshots/homepage.png)
 
-### 🔍 Task Detail Page
+### Task Detail Page
 
-![Task Detail](./screenshots/task_detail.png)
+![Task Details](./screenshots/task_detail.png)
 
 ## Future Improvements
 
