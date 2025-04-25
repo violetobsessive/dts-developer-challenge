@@ -56,6 +56,12 @@ button:focus-visible {
 ::placeholder {
   color: white;
 }
+.task-detail-page {
+  margin: 0;
+  padding: 0;
+  min-width: 100px;
+  min-height: 75vh;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
