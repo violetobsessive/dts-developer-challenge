@@ -45,11 +45,11 @@ The frontend will start at: http://localhost:5173
 
 ## Frontend Features
 
-- Add Task Fill out form (title, status, due date, optional description) / (homepage)
-- View Tasks Displays all tasks with status & due time /
-- Toggle Status One-click toggle between “Pending” and “Completed” /
-- Delete Task Removes task from frontend and backend /
-- View Detail Click task title to open a detail view with full information /tasks/:id
+- Add Task Fill out form (title, status, due date, optional description)
+- View Tasks Displays all tasks with status & due time
+- Toggle Status One-click toggle between “Pending” and “Completed”
+- Delete Task Removes task from frontend and backend
+- View Detail Click task title to open a detail view with full information
 
 ## Backend API Endpoints
 
