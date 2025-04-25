@@ -1,5 +1,6 @@
 // Root component integrating form, task list and task detail
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TaskForm from "./components/TaskFrom";
@@ -17,7 +18,7 @@ const App: React.FC = () => {
     // config endpoints/routes
     <Router>
       <div>
-        <h1>HMCTS Task Manager</h1>
+        <h1 className="ms-3">HMCTS Task Manager</h1>
         <Routes>
           <Route
             path="/"

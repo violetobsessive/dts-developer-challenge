@@ -39,19 +39,24 @@ const TaskForm: React.FC<TaskFormProps> = ({ onTaskCreated }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={handleSubmit}
+      className="d-flex flex-wrap align-items-center gap-2 mb-4"
+    >
       <input
         name="title"
         value={task.title}
         onChange={handleChange}
         placeholder="Title"
         required
+        className="border px-2 py-1 rounded"
       />
       <input
         name="description"
         value={task.description}
         onChange={handleChange}
         placeholder="Description"
+        className="border px-2 py-1 rounded"
       />
       <input
         name="dueDate"
@@ -59,12 +64,26 @@ const TaskForm: React.FC<TaskFormProps> = ({ onTaskCreated }) => {
         value={task.dueDate}
         onChange={handleChange}
         required
+        className="border px-2 py-1 rounded"
       />
-      <select name="status" value={task.status} onChange={handleChange}>
+      <select
+        name="status"
+        value={task.status}
+        onChange={handleChange}
+        className="border px-2 py-1 rounded"
+      >
         <option>Pending</option>
         <option>Completed</option>
       </select>
-      <button type="submit">Add Task</button>
+
+      <div className="ml-4">
+        <button
+          type="submit"
+          className="text-white px-4 py-2 rounded btn btn-danger ms-2"
+        >
+          Add Task
+        </button>
+      </div>
     </form>
   );
 };

@@ -44,16 +44,33 @@ const TaskList: React.FC<TaskListProps> = ({ refreshFlag }) => {
   // UI for the page
   return (
     <div>
-      <h3>Tasks</h3>
+      <h3 className="ms-3">Tasks</h3>
       <ul>
         {tasks.map((task) => (
-          <li key={task.id}>
-            <strong>
-              <Link to={`/tasks/${task.id}`}>{task.title}</Link>
-            </strong>{" "}
-            ({task.status}) – Due: {new Date(task.dueDate).toLocaleString()}
-            <button onClick={() => toggleStatus(task)}>Toggle Status</button>
-            <button onClick={() => handleDelete(task.id!)}>Delete</button>
+          <li
+            key={task.id}
+            className="d-flex justify-content-between align-items-center border rounded p-2 mb-2 bg-dark text-white"
+          >
+            <div className="flex-grow-1 me-3">
+              <Link to={`/tasks/${task.id}`} className="text-info fw-bold ">
+                {task.title}
+              </Link>{" "}
+              ({task.status}) – Due: {new Date(task.dueDate).toLocaleString()}
+            </div>
+            <div className="btn-group">
+              <button
+                onClick={() => toggleStatus(task)}
+                className="btn btn-sm btn-secondary"
+              >
+                Update
+              </button>
+              <button
+                onClick={() => handleDelete(task.id!)}
+                className="btn btn-sm btn-danger"
+              >
+                Delete
+              </button>
+            </div>
           </li>
         ))}
       </ul>

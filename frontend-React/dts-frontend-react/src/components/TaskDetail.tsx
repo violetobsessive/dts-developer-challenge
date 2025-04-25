@@ -25,20 +25,24 @@ const TaskDetail: React.FC = () => {
 
   // // UI for the landing page
   return (
-    <div>
-      <h2>Task Detail</h2>
-      <p>
-        <strong>Title:</strong> {task.title}
-      </p>
-      <p>
-        <strong>Description:</strong> {task.description || "(none)"}
-      </p>
-      <p>
-        <strong>Status:</strong> {task.status}
-      </p>
-      <p>
-        <strong>Due Date:</strong> {new Date(task.dueDate).toLocaleString()}
-      </p>
+    <div className="container d-flex justify-content-center mt-5">
+      <div className="card bg-secondary text-white" style={{ width: "30rem" }}>
+        <div className="card-body">
+          <h2 className="card-title">Task Detail</h2>
+          <p className="card-text">
+            <strong>Title:</strong> {task.title}
+          </p>
+          <p className="card-text">
+            <strong>Description:</strong> {task.description || "(none)"}
+          </p>
+          <p className="card-text">
+            <strong>Status:</strong> {task.status}
+          </p>
+          <p className="card-text">
+            <strong>Due Date:</strong> {new Date(task.dueDate).toLocaleString()}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
